@@ -1,19 +1,16 @@
-# Pro Git 2eme Ed, Effort de traduction française #
+# Pro Git 2ème Ed, Effort de traduction française #
 
-## Dépôt de référence ##
-
-Comme le mainteneur des traductions du livre est français, le dépot de référence de la traduction française est situé ici.
-https://github.com/progit/progit
+Ce dépot concerne l'effort de traduction en français de la deuxième édition du livre Progit.
 
 ## Liste de diffusion ##
 
 Notre liste de diffusion est ici: http://groups.google.com/group/progit-fr
 
-Si vous travaillez ou souhaitez travailler sur la traduction française de Progit, faites-nous le savoir, de sorte à ne pas dupliquer le travail.
+Si vous travaillez ou souhaitez travailler sur la traduction française de Progit 2ème édition, faites-nous le savoir, de sorte à ne pas dupliquer le travail.
 
 ## Workflow ##
 
-Pour simplifier la gestion et utiliser pleinement les capacités de Git et Github, la manière la plus directe de collaborer consiste à faire un fork sur Github du dépôt progit/progit sur votre propre compte pour y générer vos modifications, si possible sur une branche thématique.
+Pour simplifier la gestion et utiliser pleinement les capacités de Git et Github, la manière la plus directe de collaborer consiste à faire un fork sur Github du dépôt progit/progit2-fr sur votre propre compte pour y générer vos modifications, si possible sur une branche thématique.
 
 Ensuite, il suffit de lancer une requête de tirage pour nous avertir que les modifications peuvent être revues et intégrées.
 
