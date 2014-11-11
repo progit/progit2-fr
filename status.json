@@ -42,7 +42,7 @@
       "sections/hosted.asc": 0,
       "sections/protocols.asc": 90,
       "sections/setting-up-server.asc": 90,
-      "sections/smart-http.asc": 0
+      "sections/smart-http.asc": 90
     },
     "05-distributed-git": {
       "1-distributed-git.asc": 0,
