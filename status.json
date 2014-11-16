@@ -39,7 +39,7 @@
       "sections/git-on-a-server.asc": 90,
       "sections/gitlab.asc": 90,
       "sections/gitweb.asc": 90,
-      "sections/hosted.asc": 0,
+      "sections/hosted.asc": 90,
       "sections/protocols.asc": 90,
       "sections/setting-up-server.asc": 90,
       "sections/smart-http.asc": 90
