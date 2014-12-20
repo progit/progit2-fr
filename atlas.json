@@ -4,6 +4,8 @@
     "book/cover.html",
     "LICENSE.asc",
     "book/preface.asc",
+    "book/contributors.asc",
+    "book/introduction.asc",
     "book/toc.asc",
     "book/01-introduction/1-introduction.asc",
     "book/02-git-basics/1-git-basics.asc",
@@ -31,7 +33,7 @@
     "epub": {
       "index": true,
       "toc": true,
-      "epubcheck": false,
+      "epubcheck": true,
       "embedded_fonts": [
         "fonts/DejaVuSerif.otf",
         "fonts/DejaVuSans-Bold.otf",
