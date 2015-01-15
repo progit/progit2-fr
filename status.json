@@ -60,7 +60,7 @@
     },
     "07-git-tools": {
       "1-git-tools.asc": 90,
-      "sections/advanced-merging.asc": 0,
+      "sections/advanced-merging.asc": 90,
       "sections/bundling.asc": 0,
       "sections/credentials.asc": 0,
       "sections/debugging.asc": 0,
@@ -69,7 +69,7 @@
       "sections/replace.asc": 0,
       "sections/rerere.asc": 0,
       "sections/reset.asc": 0,
-      "sections/revision-selection.asc": 0,
+      "sections/revision-selection.asc": 90,
       "sections/rewriting-history.asc": 0,
       "sections/searching.asc": 0,
       "sections/signing.asc": 0,
