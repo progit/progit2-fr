@@ -60,11 +60,11 @@
     },
     "07-git-tools": {
       "1-git-tools.asc": 90,
-      "sections/advanced-merging.asc": 90,
+      "sections/advanced-merging.asc": 0,
       "sections/bundling.asc": 0,
       "sections/credentials.asc": 0,
       "sections/debugging.asc": 0,
-      "sections/interactive-staging.asc": 0,
+      "sections/interactive-staging.asc": 90,
       "sections/notes.asc": 0,
       "sections/replace.asc": 0,
       "sections/rerere.asc": 0,
