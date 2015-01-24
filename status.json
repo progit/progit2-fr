@@ -70,7 +70,7 @@
       "sections/rerere.asc": 0,
       "sections/reset.asc": 0,
       "sections/revision-selection.asc": 90,
-      "sections/rewriting-history.asc": 0,
+      "sections/rewriting-history.asc": 90,
       "sections/searching.asc": 0,
       "sections/signing.asc": 0,
       "sections/stashing-cleaning.asc": 90,
