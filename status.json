@@ -71,8 +71,8 @@
       "sections/reset.asc": 0,
       "sections/revision-selection.asc": 90,
       "sections/rewriting-history.asc": 90,
-      "sections/searching.asc": 0,
-      "sections/signing.asc": 0,
+      "sections/searching.asc": 90,
+      "sections/signing.asc": 90,
       "sections/stashing-cleaning.asc": 90,
       "sections/submodules.asc": 90,
       "sections/subtree-merges.asc": 0
