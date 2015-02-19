@@ -68,7 +68,7 @@
       "sections/notes.asc": 0,
       "sections/replace.asc": 0,
       "sections/rerere.asc": 0,
-      "sections/reset.asc": 0,
+      "sections/reset.asc": 90,
       "sections/revision-selection.asc": 90,
       "sections/rewriting-history.asc": 90,
       "sections/searching.asc": 90,
