@@ -66,7 +66,7 @@
       "sections/debugging.asc": 90,
       "sections/interactive-staging.asc": 90,
       "sections/notes.asc": 0,
-      "sections/replace.asc": 0,
+      "sections/replace.asc": 90,
       "sections/rerere.asc": 90,
       "sections/reset.asc": 90,
       "sections/revision-selection.asc": 90,
