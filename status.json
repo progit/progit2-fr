@@ -1,3 +1,4 @@
+
 {
   "code": "en",
   "language": "English",
@@ -81,7 +82,7 @@
       "1-customizing-git.asc": 90,
       "sections/attributes.asc": 90,
       "sections/config.asc": 90,
-      "sections/hooks.asc": 0,
+      "sections/hooks.asc": 90,
       "sections/policy.asc": 0
     },
     "09-git-and-other-scms": {
