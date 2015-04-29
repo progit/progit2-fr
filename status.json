@@ -1,3 +1,4 @@
+
 {
   "code": "en",
   "language": "English",
@@ -78,11 +79,11 @@
       "sections/subtree-merges.asc": 0
     },
     "08-customizing-git": {
-      "1-customizing-git.asc": 0,
-      "sections/attributes.asc": 0,
-      "sections/config.asc": 0,
-      "sections/hooks.asc": 0,
-      "sections/policy.asc": 0
+      "1-customizing-git.asc": 90,
+      "sections/attributes.asc": 90,
+      "sections/config.asc": 90,
+      "sections/hooks.asc": 90,
+      "sections/policy.asc": 90
     },
     "09-git-and-other-scms": {
       "1-git-and-other-scms.asc": 0,
