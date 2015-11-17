@@ -56,8 +56,8 @@
       "sections/1-setting-up-account.asc": 100,
       "sections/2-contributing.asc": 100,
       "sections/3-maintaining.asc": 100,
-      "sections/4-managing-organization.asc": 0,
-      "sections/5-scripting.asc": 0
+      "sections/4-managing-organization.asc": 100,
+      "sections/5-scripting.asc": 100
     },
     "07-git-tools": {
       "1-git-tools.asc": 100,
@@ -86,16 +86,16 @@
       "sections/policy.asc": 100
     },
     "09-git-and-other-scms": {
-      "1-git-and-other-scms.asc": 90,
-      "sections/client-hg.asc": 90,
-      "sections/client-p4.asc": 0,
-      "sections/client-svn.asc": 90,
-      "sections/client-tfs.asc": 0,
-      "sections/import-custom.asc": 0,
-      "sections/import-hg.asc": 0,
-      "sections/import-p4.asc": 0,
-      "sections/import-svn.asc": 0,
-      "sections/import-tfs.asc": 0
+      "1-git-and-other-scms.asc": 100,
+      "sections/client-hg.asc": 100,
+      "sections/client-p4.asc": 100,
+      "sections/client-svn.asc": 100,
+      "sections/client-tfs.asc": 100,
+      "sections/import-custom.asc": 100,
+      "sections/import-hg.asc": 100,
+      "sections/import-p4.asc": 100,
+      "sections/import-svn.asc": 100,
+      "sections/import-tfs.asc": 100
     },
     "10-git-internals": {
       "1-git-internals.asc": 100,
