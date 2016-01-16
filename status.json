@@ -118,10 +118,10 @@
       "sections/zsh.asc": 100
     },
     "B-embedding-git": {
-      "1-embedding-git.asc": 0,
-      "sections/command-line.asc": 0,
-      "sections/jgit.asc": 0,
-      "sections/libgit2.asc": 0
+      "1-embedding-git.asc": 90,
+      "sections/command-line.asc": 90,
+      "sections/jgit.asc": 90,
+      "sections/libgit2.asc": 90
     },
     "C-git-commands": {
       "1-git-commands.asc": 0
