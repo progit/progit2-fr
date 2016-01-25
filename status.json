@@ -2,7 +2,7 @@
 {
   "code": "en",
   "language": "English",
-  "maintainers": ["schacon"],
+  "maintainers": ["jnavila"],
   "files": {
     "01-introduction": {
       "1-introduction.asc": 100,
