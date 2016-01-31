@@ -14,6 +14,40 @@ Pour simplifier la gestion et utiliser pleinement les capacités de Git et Githu
 
 Ensuite, il suffit de lancer une requête de tirage pour nous avertir que les modifications peuvent être revues et intégrées.
 
+## Comment générer le livre ##
+
+Il y a deux façons de générer le livre aux formats PDF, e-pub, mobi et HTML.
+
+La façon la plus facile est tout simplement de nous laisser le faire. Un robot est toujours à l'écoute des nouveautés sur la branche principale et le construit automatiquement pour tout le monde.
+
+Vous pouvez trouver la dernière publication à http://git-scm.com/book/fr/v2[]. Vous trouverez plus d'informations à ce sujet à https://progit.org[] et vous pouvez voir les publications successives à https://progit.org/translations/lang/fr[].
+
+L'autre façon de générer les différentes versions du livre est de le faire manuellement avec Asciidoctor. Pour cela, vous devez installer les paquets ruby, rubygems, rubygem-asciidoctor et ruby-devel s'ils ne sont pas déjà installés.
+
+Vous ne lancerez la commande suivante qu'une seule fois :
+
+----
+$ bundle install
+----
+
+Ensuite, lorsque de nouvelles versions sont publiées, vous générerez le livre aux formats PDF, e-pub, mobi et HTML avec la commande suivante :
+
+----
+$ bundle exec rake book:build
+Converting to HTML...
+ -- HTML output at progit.html
+Converting to EPub...
+ -- Epub output at progit.epub
+Converting to Mobi (kf8)...
+ -- Mobi output at progit.mobi
+Converting to PDF...
+ -- PDF  output at progit.pdf
+----
+
+Cela utilise les projets `asciidoctor`, `asciidoctor-pdf` et `asciidoctor-epub`.
+
+Pour plus d'informations, veuillez vous référer à `generer_livre.md`.
+
 # Références pour la traduction #
 
 ## Fichier glossaire ##
