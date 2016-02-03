@@ -1,0 +1,305 @@
+# Générer le livre #
+
+## Le cas sans erreur ##
+
+La génération du livre se fait en deux étapes. Premièrement, vous devez vérifier les dépendances avec la commande suivante :
+
+----
+$ bundle install
+----
+
+Si tout se passe bien, vous devez obtenir quelque chose comme :
+
+----
+$ bundle install
+Using rake 10.4.2
+Using Ascii85 1.0.2
+Using afm 0.2.2
+Using asciidoctor 1.5.0
+Using mini_portile2 2.0.0
+Using rubyzip 1.1.7
+Using thread_safe 0.3.5
+Using pdf-core 0.2.5
+Using ttfunk 1.2.2
+Using prawn-table 0.1.1
+Using hashery 2.1.1
+Using ruby-rc4 0.1.5
+Using polyglot 0.3.5
+Using awesome_print 1.6.1
+Using coderay 1.1.0
+Using epubcheck 3.0.1
+Using json 1.8.3
+Using kindlegen 2.9.6
+Using posix-spawn 0.3.11
+Using yajl-ruby 1.2.1
+Using bundler 1.11.2
+Using nokogiri 1.6.7.1
+Using prawn 1.2.1
+Using pdf-reader 1.3.3
+Using treetop 1.5.3
+Using pygments.rb 0.6.3
+Using gepub 0.6.9.2
+Using prawn-svg 0.16.0
+Using prawn-templates 0.0.3
+Using asciidoctor-epub3 1.0.0.alpha.2
+Using asciidoctor-pdf 1.5.0.alpha.5                                                                                                                                                                  
+Bundle complete! 11 Gemfile dependencies, 31 gems now installed.                                                                                                                                     
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+----
+
+Cette commande n'est à taper qu'une seule fois.
+
+Ensuite, à chaque fois que vous voudrez générer le livre, tapez la commande suivante :
+
+----
+$ bundle exec rake book:build
+Converting to HTML...
+ -- HTML output at progit.hml
+Converting to EPub...
+ -- Epub output at progit.epub
+Converting to Mobi (kf8)
+ -- Mobi output to progit.mobi
+Converting to PDF... (this one takes a while)
+ -- PDF output at progit.pdf
+----
+
+C'est tout ! Vous pouvez maintenant ouvrir le livre dans le format que vous désirez.
+
+## Erreur de dépendances Gemfile ##
+
+### Message d'erreur ###
+
+Si vos versions de dépendances ne sont pas adéquates, vous pouvez obtenir le genre d'erreur suivant :
+
+----
+$ bundle install
+Fetching gem metadata from https://rubygems.org/...........
+Fetching version metadata from https://rubygems.org/..
+Using rake 10.3.2
+Using Ascii85 1.0.2
+Using afm 0.2.2
+Using asciidoctor 1.5.0
+Using mini_portile 0.6.0
+Using rubyzip 1.1.6
+Using thread_safe 0.3.4
+Using pdf-core 0.2.5
+Using ttfunk 1.2.2
+Using prawn-table 0.1.1
+Using hashery 2.1.1
+Using ruby-rc4 0.1.5
+Using polyglot 0.3.5
+Using awesome_print 1.2.0
+Using coderay 1.1.0
+Using epubcheck 3.0.1
+Installing json 1.8.1 with native extensions
+
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    /usr/bin/ruby -r ./siteconf20160203-4423-1ono1yp.rb extconf.rb                                                                                                                                   
+creating Makefile                                                                                                                                                                                    
+
+make "DESTDIR=" clean                                                                                                                                                                                
+rm -f                                                                                                                                                                                                
+rm -f generator.so  *.o  *.bak mkmf.log .*.time                                                                                                                                                      
+
+make "DESTDIR="                                                                                                                                                                                      
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DJSON_GENERATOR    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -mtune=generic -fPIC -O3 -Wall -O0 -ggdb -m64 -o generator.o -c generator.c                      
+In file included from /usr/include/stdio.h:27:0,                                                                                                                                                     
+                 from /usr/include/ruby/defines.h:26,                                                                                                                                                
+                 from /usr/include/ruby/ruby.h:29,                                                                                                                                                   
+                 from /usr/include/ruby.h:33,                                                                                                                                                        
+                 from ../fbuffer/fbuffer.h:5,                                                                                                                                                        
+                 from generator.c:1:                                                                                                                                                                 
+/usr/include/features.h:328:4: attention : #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Wcpp]                                                                                
+ #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)                                                                                                                                
+    ^                                                                                                                                                                                                
+In file included from generator.c:1:0:                                                                                                                                                               
+../fbuffer/fbuffer.h: Dans la fonction ‘fbuffer_to_s’:                                                                                                                                               
+../fbuffer/fbuffer.h:175:47: erreur: la macro « rb_str_new » requiert 2 arguments, mais seulement 1 ont été passés                                                                                   
+     VALUE result = rb_str_new(FBUFFER_PAIR(fb));                                                                                                                                                    
+                                               ^                                                                                                                                                     
+../fbuffer/fbuffer.h:175:20: attention : initialization makes integer from pointer without a cast [-Wint-conversion]                                                                                 
+     VALUE result = rb_str_new(FBUFFER_PAIR(fb));                                                                                                                                                    
+                    ^                                                                                                                                                                                
+Makefile:238: recipe for target 'generator.o' failed                                                                                                                                                 
+make: *** [generator.o] Error 1                                                                                                                                                                      
+
+make failed, exit code 2                                                                                                                                                                             
+
+Gem files will remain installed in /home/<user>/.gem/ruby/gems/json-1.8.1 for inspection.                                                                                                           
+Results logged to /home/<user>/.gem/ruby/extensions/x86_64-linux/json-1.8.1/gem_make.out                                                                                                            
+Installing kindlegen 2.9.3 with native extensions
+
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    /usr/bin/ruby -r ./siteconf20160203-4423-1wehsfo.rb extconf.rb                                                                                                                                   
+
+make "DESTDIR=" clean                                                                                                                                                                                
+make: *** No rule to make target 'clean'. Arrêt.                                                                                                                                                     
+
+make "DESTDIR="                                                                                                                                                                                      
+make: Nothing to be done for 'all'.                                                                                                                                                                  
+
+make "DESTDIR=" install                                                                                                                                                                              
+curl http://s3.amazonaws.com/kindlegen/kindlegen_linux_2.6_i386_v2_9.tar.gz -o kindlegen_linux_2.6_i386_v2_9.tar.gz                                                                                  
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current                                                                                                                      
+                                 Dload  Upload   Total   Spent    Left  Speed                                                                                                                        
+100 10.3M  100 10.3M    0     0   538k      0  0:00:19  0:00:19 --:--:--  747k                                                                                                                       
+tar zxf kindlegen_linux_2.6_i386_v2_9.tar.gz                                                                                                                                                         
+cp */kindlegen kindlegen                                                                                                                                                                             
+cp: impossible d'évaluer « */kindlegen »: Aucun fichier ou dossier de ce type                                                                                                                        
+Makefile:13: recipe for target 'kindlegen' failed                                                                                                                                                    
+make: *** [kindlegen] Error 1                                                                                                                                                                        
+
+make install failed, exit code 2                                                                                                                                                                     
+
+Gem files will remain installed in /home/<user>/.gem/ruby/gems/kindlegen-2.9.3 for inspection.                                                                                                      
+Results logged to /home/<user>/.gem/ruby/extensions/x86_64-linux/kindlegen-2.9.3/gem_make.out                                                                                                       
+Using posix-spawn 0.3.9
+Using yajl-ruby 1.1.0
+Using bundler 1.11.2
+Installing nokogiri 1.6.3.1 with native extensions
+Building nokogiri using packaged libraries.
+Building libxml2-2.8.0 for nokogiri with the following patches applied:
+        - 0001-Fix-parser-local-buffers-size-problems.patch
+        - 0002-Fix-entities-local-buffers-size-problems.patch
+        - 0003-Fix-an-error-in-previous-commit.patch
+        - 0004-Fix-potential-out-of-bound-access.patch
+        - 0005-Detect-excessive-entities-expansion-upon-replacement.patch
+        - 0006-Do-not-fetch-external-parsed-entities.patch
+        - 0007-Enforce-XML_PARSER_EOF-state-handling-through-the-pa.patch
+        - 0008-Improve-handling-of-xmlStopParser.patch
+        - 0009-Fix-a-couple-of-return-without-value.patch
+        - 0010-Keep-non-significant-blanks-node-in-HTML-parser.patch
+        - 0011-Do-not-fetch-external-parameter-entities.patch
+************************************************************************
+IMPORTANT!  Nokogiri builds and uses a packaged version of libxml2.
+
+If this is a concern for you and you want to use the system library
+instead, abort this installation process and reinstall nokogiri as
+follows:
+
+    gem install nokogiri -- --use-system-libraries
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+However, note that nokogiri does not necessarily support all versions
+of libxml2.
+
+For example, libxml2-2.9.0 and higher are currently known to be broken
+and thus unsupported by nokogiri, due to compatibility problems and
+XPath optimization bugs.
+************************************************************************
+
+Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+    /usr/bin/ruby -r ./siteconf20160203-4423-kff3tr.rb extconf.rb                                                                                                                                    
+Building nokogiri using packaged libraries.                                                                                                                                                          
+checking for iconv.h... yes                                                                                                                                                                          
+checking for iconv_open() in iconv.h... yes                                                                                                                                                          
+Building libxml2-2.8.0 for nokogiri with the following patches applied:                                                                                                                              
+        - 0001-Fix-parser-local-buffers-size--problems.patch
+        - 0002-Fix-entities-local-buffer-size-problems.patch
+        - 0003-Fix-an-error-in-previous-commit.patch
+        - 0004-Fix-potential-out-of-bound-access.patch
+        - 0005-Detect-excessive-entities-expansion-upon-replacement.patch
+        - 0006-Do-not-fetch-external-parsed-entities.patch
+        - 0007-Enforce-XML_PARSER_EOF-state-handling-through-the-pa.patch
+        - 0008-Improve-handling-of-xmlStopParser.patch
+        - 0009-Fix-a-couple-of-return-without-value.patch
+        - 0010-Keep-non-significant-blanks-node-in-HTML-parser.patch
+        - 0011-Do-not-fetch-external-parameter-entities.patch
+************************************************************************                                                                                                                             
+IMPORTANT!  Nokogiri builds and uses a packaged version of libxml2.                                                                                                                                  
+
+If this is a concern for you and you want to use the system library                                                                                                                                  
+instead, abort this installation process and reinstall nokogiri as                                                                                                                                   
+follows:                                                                                                                                                                                             
+
+    gem install nokogiri -- --use-system-libraries                                                                                                                                                   
+
+If you are using Bundler, tell it to use the option:                                                                                                                                                 
+
+    bundle config build.nokogiri --use-system-libraries                                                                                                                                              
+    bundle install                                                                                                                                                                                   
+
+However, note that nokogiri does not necessarily support all versions                                                                                                                                
+of libxml2.                                                                                                                                                                                          
+
+For example, libxml2-2.9.0 and higher are currently known to be broken                                                                                                                               
+and thus unsupported by nokogiri, due to compatibility problems and                                                                                                                                  
+XPath optimization bugs.                                                                                                                                                                             
+************************************************************************                                                                                                                             
+Extracting libxml2-2.8.0.tar.gz into tmp/x86_64-redhat-linux-gnu/ports/libxml2/2.8.0... OK                                                                                                           
+Running patch with /home/<user>/.gem/ruby/gems/nokogiri-1.6.3.1/ports/patches/libxml2/0001-Fix-parser-local-buffers-size-problems.patch...                                                          
+Running 'patch' for libxml2 2.8.0... ERROR, review 'tmp/x86_64-redhat-linux-gnu/ports/libxml2/2.8.0/patch.log' to see what happened.                                                                 
+*** extconf.rb failed ***                                                                                                                                                                            
+Could not create Makefile due to some reason, probably lack of necessary                                                                                                                             
+libraries and/or headers.  Check the mkmf.log file for more details.  You may                                                                                                                        
+need configuration options.                                                                                                                                                                          
+
+Provided configuration options:                                                                                                                                                                      
+        --with-opt-dir
+        --without-opt-dir
+        --with-opt-include
+        --without-opt-include=${opt-dir}/include
+        --with-opt-lib
+        --without-opt-lib=${opt-dir}/lib64
+        --with-make-prog
+        --without-make-prog
+        --srcdir=.
+        --curdir
+        --ruby=/usr/bin/$(RUBY_BASE_NAME)
+        --help
+        --clean
+        --use-system-libraries
+        --enable-static
+        --disable-static
+        --with-zlib-dir
+        --without-zlib-dir
+        --with-zlib-include
+        --without-zlib-include=${zlib-dir}/include
+        --with-zlib-lib
+        --without-zlib-lib={zlib-dir}/lib64
+        --enable-cross-build
+        --disable-cross-build
+/home/<user>/.gem/ruby/gems/mini_portile-0.6.0/lib/mini_portile.rb:279:in `block in execute': Failed to complete patch task (RuntimeError)                                                          
+        from /home/<user>/.gem/ruby/gems/mini_portile-0.6.0/lib/mini_portile.rb:271:in `chdir'
+        from /home/<user>/.gem/ruby/gems/mini_portile-0.6.0/lib/mini_portile.rb:271:in `execute'
+        from extconf.rb:282:in `block in patch'
+        from extconf.rb:279:in `each'
+        from extconf.rb:279:in `patch'
+        from /home/<user>/.gem/ruby/gems/mini_portile-0.6.0/lib/mini_portile.rb:108:in `cook'
+        from extconf.rb:253:in `block in process_recipe'
+        from extconf.rb:154:in `tap'
+        from extconf.rb:154:in `process_recipe'
+        from extconf.rb:423:in `<main>'
+
+extconf failed, exit code 1                                                                                                                                                                          
+
+Gem files will remain installed in /home/<user>/.gem/ruby/gems/nokogiri-1.6.3.1 for inspection.                                                                                                     
+Results logged to /home/<user>/.gem/ruby/extensions/x86_64-linux/nokogiri-1.6.3.1/gem_make.out                                                                                                      
+Using prawn 1.2.1
+Using pdf-reader 1.3.3
+Using treetop 1.5.3
+An error occurred while installing json (1.8.1), and Bundler cannot continue.
+Make sure that `gem install json -v '1.8.1'` succeeds before bundling.
+----
+
+### Solution ###
+
+La solution à ce problème est simple :
+
+----
+$ rm Gemfile.lock
+$ bundle install
+----
+
+Ceci va reconstruite Gemfile.lock en fonction de votre système et vous serez alors en mesure de construire le livre.
+
+## Problème de paquets ##
+
+Si vous obtenez un message d'erreur différent du type de celui ci-dessus, il s'agit alors sans doute de paquets non installés. Lisez attentivement le message d'erreur pour trouver de quel paquet il s'agit.
