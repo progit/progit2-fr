@@ -1,6 +1,9 @@
 output
 .DS_Store
 
+# bundle install product
+Gemfile.lock
+
 # build artifacts
 progit.html
 progit.pdf
