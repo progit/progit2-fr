@@ -1,5 +1,6 @@
 [appendix]
-== Git dans d'autres environnements
+[#A-git-in-other-environments]
+= Git dans d'autres environnements
 
 Si vous avez lu le livre dans son intégralité, vous avez appris beaucoup sur son utilisation à partir de la ligne de commande.
 Vous pouvez travailler avec des fichiers locaux, connecter vos dépôts avec d'autres à travers un réseau et travailler efficacement avec d'autres personnes.
@@ -19,6 +20,6 @@ include::book/A-git-in-other-environments/sections/zsh.asc[]
 
 include::book/A-git-in-other-environments/sections/powershell.asc[]
 
-=== Résumé
+== Résumé
 
 Vous avez appris à utiliser la puissance de Git depuis les outils que vous utilisez habituellement, ainsi qu'à accéder aux dépôts Git depuis vos propres programmes.

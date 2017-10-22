@@ -1,5 +1,5 @@
-[[_git_branching]]
-== Les branches avec Git
+[#03-git-branching]
+= Les branches avec Git
 
 (((branches)))
 Presque tous les VCS proposent une certaine forme de gestion de branches.
@@ -24,7 +24,7 @@ include::book/03-git-branching/sections/remote-branches.asc[]
 
 include::book/03-git-branching/sections/rebasing.asc[]
 
-=== Résumé
+== Résumé
 
 Nous avons traité les bases des branches et des fusions dans Git.
 Vous devriez désormais être à l'aise pour créer et basculer sur de nouvelles branches, basculer entre branches et fusionner des branches locales.

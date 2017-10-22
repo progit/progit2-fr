@@ -1,5 +1,6 @@
 [[_github]]
-== GitHub
+[#06-github]
+= GitHub
 
 (((GitHub)))
 
@@ -10,7 +11,7 @@ Donc, bien que ce ne soit pas un sous-ensemble direct du projet open source Git,
 Ce chapitre présente la façon d'utiliser GitHub de manière efficace.
 Nous traiterons la création et la gestion d'un compte utilisateur, la création et l'utilisation de dépôts Git, les processus courants pour contribuer aux projets ou pour accepter des contributions, l'interface de programmation de GitHub ainsi qu'un grand nombre d'astuces pour vous simplifier la vie.
 
-Si vous n'êtes pas intéressé par l'utilisation de GitHub pour héberger vos projets personnels ou pour collaborer à d'autres projets hébergés sur GitHub, vous pouvez sans problème passer directement à <<_git_tools>>.
+Si vous n'êtes pas intéressé par l'utilisation de GitHub pour héberger vos projets personnels ou pour collaborer à d'autres projets hébergés sur GitHub, vous pouvez sans problème passer directement à <<07-git-tools#07-git-tools>>.
 
 [WARNING]
 .Modification de l'interface
@@ -29,7 +30,7 @@ include::book/06-github/sections/4-managing-organization.asc[]
 
 include::book/06-github/sections/5-scripting.asc[]
 
-=== Résumé
+== Résumé
 
 Vous êtes maintenant un utilisateur de GitHub.
 Vous savez comment créer un compte, gérer une organisation, créer des dépôts et pousser dessus, contribuer aux projets d'autres utilisateurs et accepter les contributions sur les vôtres.

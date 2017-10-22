@@ -1,5 +1,6 @@
 [[_getting_started]]
-== Démarrage rapide
+[#01-introduction]
+= Démarrage rapide
 
 Ce chapitre traite du démarrage rapide avec Git.
 Nous commencerons par expliquer les bases de la gestion de version, puis nous parlerons de l'installation de Git sur votre système et finalement du paramétrage pour commencer à l'utiliser.
@@ -19,7 +20,7 @@ include::book/01-introduction/sections/first-time-setup.asc[]
 
 include::book/01-introduction/sections/help.asc[]
 
-=== Résumé
+== Résumé
 
 Vous devriez avoir à présent une compréhension initiale de ce que Git est et en quoi il est différent des CVCS que vous pourriez déjà avoir utilisés.
 Vous devriez aussi avoir une version de Git en état de fonctionnement sur votre système, paramétrée avec votre identité.

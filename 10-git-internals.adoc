@@ -1,5 +1,6 @@
 [[_git_internals]]
-== Les tripes de Git
+[#10-git-internals]
+= Les tripes de Git
 
 Vous êtes peut-être arrivé à ce chapitre en en sautant certains autres ou après avoir parcouru tout le reste du livre.
 Dans tous les cas, c'est ici que le fonctionnement interne et la mise en œuvre de Git sont abordés.
@@ -34,7 +35,7 @@ include::book/10-git-internals/sections/maintenance.asc[]
 
 include::book/10-git-internals/sections/environment.asc[]
 
-=== Résumé
+== Résumé
 
 Vous devriez avoir une assez bonne compréhension de ce que Git fait en arrière-plan et, jusqu'à un certain niveau, comment il est implémenté.
 Ce chapitre a parcouru plusieurs commandes de plomberie, qui sont à un niveau plus bas et plus simple que les commandes de porcelaine que vous avez vues dans le reste du livre.

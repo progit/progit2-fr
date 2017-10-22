@@ -1,5 +1,6 @@
 [appendix]
-== Embarquer Git dans vos applications
+[#B-embedding-git]
+= Embarquer Git dans vos applications
 
 Si votre application est destinée aux développeurs, il y a de grandes chances qu'elle bénéficierait de l'intégration avec une gestion de source.
 Même des applications pour non-développeurs, tels que les éditeurs de document, pourraient potentiellement bénéficier d'une fonctionnalité de gestion de version et le modèle de Git fonctionne très bien dans de nombreux scénarios.
