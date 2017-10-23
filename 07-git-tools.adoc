@@ -1,4 +1,4 @@
-[[_git_tools]]
+[[s_git_tools]]
 [#07-git-tools]
 = Utilitaires Git
 

@@ -1,4 +1,4 @@
-[[_git_internals]]
+[[s_git_internals]]
 [#10-git-internals]
 = Les tripes de Git
 

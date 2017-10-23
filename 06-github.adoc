@@ -1,4 +1,4 @@
-[[_github]]
+[[s_github]]
 [#06-github]
 = GitHub
 

@@ -26,7 +26,7 @@ include::book/09-git-and-other-scms/sections/client-p4.asc[]
 
 include::book/09-git-and-other-scms/sections/client-tfs.asc[]
 
-[[_migrating]]
+[[s_migrating]]
 == Migration vers Git
 
 (((Migration vers Git)))

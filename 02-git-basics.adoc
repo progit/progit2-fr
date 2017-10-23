@@ -1,4 +1,4 @@
-[[_git_basics_chapter]]
+[[s_git_basics_chapter]]
 [#02-git-basics]
 = Les bases de Git
 

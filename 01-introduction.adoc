@@ -1,4 +1,4 @@
-[[_getting_started]]
+[[s_getting_started]]
 [#01-introduction]
 = Démarrage rapide
 

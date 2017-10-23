@@ -1,4 +1,4 @@
-[[_customizing_git]]
+[[s_customizing_git]]
 [#08-customizing-git]
 = Personnalisation de Git
 
