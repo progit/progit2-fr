@@ -12,7 +12,7 @@ deploy:
     secure: XT3fnofLU13ZpmZX4jXVbG2mLIMvjkFKS4TGLjNwJKdhLyZQqmP6kVzsZl8RGknkfPe8IOudXfnaQn/v8eJYrJXIiVXJlZyn///E7tLr0dYwj3wCPaIv0F04rJAhwqA6pPLDvY53b5EG0vqPbg28P0qFLPbk3KIIUFJmot3gzU0=
   file:
   - progit.epub
-  - progit.mobi
+  - progit-kf8.epub
   - progit.pdf
   skip_cleanup: true
   on:
