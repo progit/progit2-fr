@@ -1,23 +1,34 @@
 language: ruby
+sudo: false
+git:
+  depth: false
 cache: bundler
 before_install:
-- gem install bundler -v 1.15.4
-- bundle install
-after_success:
-- script/tag_on_master
+ - wget https://raw.githubusercontent.com/progit/progit2-pub/master/bootstrap.sh
+ - sh bootstrap.sh
 script: bundle exec rake book:build
+after_success: bundle exec rake book:tag
 deploy:
   provider: releases
-  api_key:
-    secure: XT3fnofLU13ZpmZX4jXVbG2mLIMvjkFKS4TGLjNwJKdhLyZQqmP6kVzsZl8RGknkfPe8IOudXfnaQn/v8eJYrJXIiVXJlZyn///E7tLr0dYwj3wCPaIv0F04rJAhwqA6pPLDvY53b5EG0vqPbg28P0qFLPbk3KIIUFJmot3gzU0=
+  file_glob: true
   file:
-  - progit.epub
-  - progit-kf8.epub
-  - progit.pdf
+  - progit*.epub
+  - progit*.mobi
+  - progit*.pdf
   skip_cleanup: true
   on:
     tags: true
+  api-key: $GITHUB_API_TOKEN
 branches:
   only:
   - master
   - /^2\.1(\.\d+)+$/
+
+addons:
+  apt:
+    packages:
+      - epubcheck
+notifications:
+  email:
+    on_success: never
+    on_failure: always
