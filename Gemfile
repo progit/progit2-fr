@@ -16,6 +16,7 @@ gem 'coderay'
 gem 'pygments.rb'
 gem 'thread_safe'
 gem 'epubcheck-ruby'
+gem 'html-proofer'
 
 gem 'octokit'
 gem 'github_changelog_generator', github: 'Furtif/github-changelog-generator'

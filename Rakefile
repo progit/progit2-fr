@@ -62,6 +62,8 @@ namespace :book do
     exec_or_raise("bundle exec asciidoctor -a data-uri #{progit_v}.asc")
     puts " -- HTML output at #{progit_v}.html"
 
+    exec_or_raise("bundle exec htmlproofer --check-html #{progit_v}.html")
+
     puts "Converting to EPub..."
     exec_or_raise("bundle exec asciidoctor-epub3 #{progit_v}.asc")
     puts " -- Epub output at #{progit_v}.epub"
