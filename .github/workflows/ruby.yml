@@ -67,16 +67,16 @@ jobs:
           asset_path: ./progit.epub
           asset_name: progit.epub
           asset_content_type: application/epub+zip
-      - name: Upload mobi
-        id: upload-mobi
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./progit.mobi
-          asset_name: progit.mobi
-          asset_content_type: application/x-mobipocket-ebook
+      # - name: Upload mobi
+      #   id: upload-mobi
+      #   uses: actions/upload-release-asset@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: ./progit.mobi
+      #     asset_name: progit.mobi
+      #     asset_content_type: application/x-mobipocket-ebook
       - name: Upload pdf
         id: upload-pdf
         uses: actions/upload-release-asset@v1
