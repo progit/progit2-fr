@@ -22,6 +22,8 @@ jobs:
         LASTPATCH=$(git describe --tags | cut -d- -f1 | cut -d. -f3)
         PATCH=$(($LASTPATCH+1))
         echo "::set-output name=tagname::2.1.${PATCH}"
+        echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
+
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
@@ -36,5 +38,5 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         tag: ${{ steps.compute-tag.outputs.tagname }}
-        commit: main
+        commit: ${{ steps.compute-tag.outputs.branch }}
         artifacts: './progit.epub,./progit.mobi,./progit.pdf,./progit.html'
