@@ -21,4 +21,4 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
     - name: Build book
-      run: bundle exec rake book:build
+      run: bundle exec rake book:build_action
